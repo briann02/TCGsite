@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Container, Box, Button, VStack, Heading, Input, Select, 
   NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper,
-  useToast } from '@chakra-ui/react';
+  useToast, Textarea} from '@chakra-ui/react';
 import { useProductStore } from '../../store/product';
 
 const CreatePage = () => {
@@ -12,6 +12,7 @@ const CreatePage = () => {
     game: "",
     productType: "",
     stock: "",
+    description: "",
     image: ""
   });
 
@@ -78,10 +79,9 @@ const CreatePage = () => {
         status: "success",
         isClosable: true
       })
+      setNewProduct({ name: "", price: "", game: "", productType: "", stock: "", description: "", image: ""});
+      window.location.reload();
     }
-    setNewProduct({ name: "", price: "", game: "", productType: "", stock: "", image: "" });
-    // Refresh the page 
-    window.location.reload();
   };
 
   return (
@@ -145,6 +145,13 @@ const CreatePage = () => {
                 <NumberDecrementStepper />
               </NumberInputStepper>
             </NumberInput>
+
+            <Textarea 
+              placeholder='Enter description for the product'
+              name='description'
+              value={newProduct.description}
+              onChange={(e) => setNewProduct({ ...newProduct, description: e.target.value })}
+            />
 
             <Input 
               placeholder='Image URL' 

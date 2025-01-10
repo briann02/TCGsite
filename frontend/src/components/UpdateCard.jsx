@@ -1,7 +1,8 @@
 import { EditIcon, DeleteIcon } from '@chakra-ui/icons'
 import { Box, Heading, HStack, IconButton, Image, Modal, Text, Tooltip, useToast, useDisclosure, Input,
     ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, VStack, Button,
-    NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper, Select} from '@chakra-ui/react'
+    NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper, Select,
+    Textarea} from '@chakra-ui/react'
 import { useProductStore } from '../../store/product'
 import { useState, useEffect } from 'react'
 
@@ -167,6 +168,10 @@ const UpdateCard = ({ product }) => {
                     {product.stock} in stock
                 </Text>
 
+                <Text fontWeight='bold' fontSize='xl' mb={4}>
+                    Description: {product.description}
+                </Text>
+
                 <HStack spacing={2}>
                     <Tooltip label='Edit product'>
                         <IconButton colorScheme='blue' onClick={onOpen} icon={<EditIcon />} />
@@ -234,6 +239,14 @@ const UpdateCard = ({ product }) => {
                                     <NumberDecrementStepper />
                                 </NumberInputStepper>
                             </NumberInput>
+                            
+                            <Textarea 
+                                placeholder='Enter description for the product'
+                                name='description'
+                                value={updateProduct.description}
+                                onChange={(e) => setUpdatedProduct({ ...updatedProduct, description: e.target.value })}
+                            />
+
                             <Input
                                 placeholder='Image URL'
                                 name='image'
