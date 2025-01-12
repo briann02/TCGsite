@@ -7,6 +7,7 @@ import UpdatePage from './pages/UpdatePage'
 import Navbar from './components/Navbar'
 import Logobar from "./components/Logobar";
 import BrowsePage from "./pages/BrowsePage";
+import InfoPage from "./pages/InfoPage";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/create" element= {<CreatePage />} />
         <Route path="/update" element= {<UpdatePage />} />
         <Route path="/:requestedGame/:requestedType" element= {<BrowsePage />} />
+        <Route path="/:productId/info" element= {<InfoPage />} />
       </Routes>
 
     </Box>

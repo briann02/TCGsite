@@ -21,7 +21,7 @@ export const BrowsePage = () => {
     : requestedType === 'booster_bundle' ? "Booster Bundle"
     : requestedType === 'singles' ? "Single Card"
     : requestedType === 'starter_deck' ? "Starter Deck"
-    : "";
+    : "miscellaneous";
     
     const gameMessage = requestedGame === 'pkm' ? "Pokemon TCG" 
     : requestedGame === 'ygo' ? "Yu-Gi-Oh!"
