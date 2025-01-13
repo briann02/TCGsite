@@ -104,7 +104,7 @@ const CreatePage = () => {
               name='price' 
               value={format(newProduct.price)} 
               precision={2}
-              step={0.1}
+              step={0.01}
               min={0}
               w={'100%'}
               onChange={(valueString) => setNewProduct({ ...newProduct, price: parse(valueString) })}

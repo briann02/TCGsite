@@ -16,6 +16,7 @@ const ProductCard = ({product}) => {
         overflow='hidden'
         transition='all 0.3s'
         _hover={{transform: "translateY(-5px)", shadow: "xl"}}
+        onClick={() => navigate(`/${product._id}/info`)}
         >
             <Image src={product.image} alt={product.name} h={48} w='full' objectFit='contain' />
             <Box p={4}>
@@ -24,7 +25,7 @@ const ProductCard = ({product}) => {
                 </Heading>
 
                 <Text fontWeight='bold' fontSize='xl' mb={4}>
-                    ${product.price}
+                    ${product.price.toFixed(2)}
                 </Text>
 
                 <HStack spacing={2}>

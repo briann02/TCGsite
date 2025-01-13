@@ -11,7 +11,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <Container maxW={"50%"} px={"4"} outline="2px solid black">
+    <Container maxW={"50%"} px={"4"}>
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"} flexDirection={{base:"row", sm:"row"}}>
         {/*POKEMON PRODUCTS TAB */}
         <Menu>  

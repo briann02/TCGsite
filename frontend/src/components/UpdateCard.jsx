@@ -146,7 +146,7 @@ const UpdateCard = ({ product }) => {
                 </Heading>
 
                 <Text fontWeight='bold' fontSize='xl' mb={4}>
-                    ${product.price}
+                    ${product.price.toFixed(2)}
                 </Text>
 
                 <Text fontWeight='bold' fontSize='xl' mb={4}>
@@ -198,7 +198,7 @@ const UpdateCard = ({ product }) => {
                                 name='price'
                                 value={format(updatedProduct.price)}
                                 precision={2}
-                                step={0.1}
+                                step={0.01}
                                 min={0}
                                 w={'100%'}
                                 onChange={(valueString) => setUpdatedProduct({ ...updatedProduct, price: parse(valueString) })}
