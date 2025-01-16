@@ -7,8 +7,12 @@ const userSchema = new mongoose.Schema({
     },
     accessLevel: {
         type: Number,
-        enum: [1, 2],
+        enum: [1, 2, 3],
         required: true
+    },
+    address: {
+        type: String,
+        required: false
     },
     password: {
         type: String,
