@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import Cart from "./cart.model.js";
 
 const userSchema = new mongoose.Schema({
     username: {
@@ -19,11 +18,13 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    cart: { 
-        type: mongoose.Schema.Types.ObjectId, 
-        ref: 'Cart',
-        required: true
-    }
+    // cartId: { 
+    //     type: Schema.Types.ObjectId, 
+    //     ref: 'Cart', // Assuming your cart collection is named 'Cart' 
+    //     // required: true commented out until cart schema is added
+    //     // make sure to add || !user.cartId in controller
+    // }
+
 }, {
     timestamps: true // createdAt, updatedAt
 });
