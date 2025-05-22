@@ -112,12 +112,6 @@ const Navbar = () => {
             <MenuItem minH='40px' onClick={() => navigate("/update")}>
               <span>Update/Delete Product</span>
             </MenuItem>
-            <MenuItem minH='40px' onClick={() => navigate("/createUser")}>
-              <span>Add New User</span>
-            </MenuItem>
-            <MenuItem minH='40px' onClick={() => navigate("/allUsers")}>
-              <span>View/Update Users</span>
-            </MenuItem>
           </MenuList>
         </Menu>
 

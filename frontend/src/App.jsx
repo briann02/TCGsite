@@ -8,8 +8,6 @@ import Navbar from './components/Navbar'
 import Logobar from "./components/Logobar";
 import BrowsePage from "./pages/BrowsePage";
 import InfoPage from "./pages/InfoPage";
-import CreateUser from "./pages/CreateUser";
-import AllUsers from "./pages/AllUsers";
 
 function App() {
 
@@ -23,8 +21,6 @@ function App() {
         <Route path="/update" element= {<UpdatePage />} />
         <Route path="/:requestedGame/:requestedType" element= {<BrowsePage />} />
         <Route path="/:productId/info" element= {<InfoPage />} />
-        <Route path="/createUser" element= {<CreateUser />} />
-        <Route path="/allUsers" element= {<AllUsers />} />
       </Routes>
 
     </Box>
