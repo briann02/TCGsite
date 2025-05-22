@@ -7,7 +7,7 @@ const Logobar = () => {
     <Container maxW={"100%"} px={"4"} padding={"20px"}>
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Box flex={"1"} textAlign={"center"}>
-              <Text><Link to="/">THIS IS THE EPIC LOGO</Link></Text>
+              <Text><Link to="/">TCG Site by Brian Nguyen</Link></Text>
           </Box>
           <Box textAlign={"center"}> 
             <Avatar src='https://bit.ly/broken-link' /> 
